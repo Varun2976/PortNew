@@ -2,6 +2,7 @@ import { useState } from 'react'
 import pfp from './assets/pfp.jpg'
 import './App.css'
 import './index.css'
+import TechStack from './Techstack.jsx'
 
 function App() {
   return (
@@ -32,7 +33,10 @@ function App() {
           <button className="text-green-800 text-[20px] border-2 border-green-800 pl-4 pr-4 pt-2 pb-2 rounded-[30px] mt-6 font-mono hover:bg-green-800 hover:text-black">Resume</button>
         </div>
       </div>
+      <TechStack/>
     </div>
+
+
   );
 }
 

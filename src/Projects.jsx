@@ -1,5 +1,9 @@
 const projects = [
   {
+    title: "Farm To Fork Using BlockChain",
+    summary: "A system that connects the connects the farmers to different distributors, retailers and consumers. Blockchain is being used to increase the security and also helps us in tracking how and where supplies are being transported.",
+  },
+  {
     title: "Railway Concession System",
     summary: "A system to automate and manage railway concession workflows efficiently.",
   },

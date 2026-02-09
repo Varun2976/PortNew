@@ -48,8 +48,9 @@ function App() {
 </div>
 
       <TechStack />
-      <Experience />
       <Projects/>
+      <Experience />
+      
     </div>
   )
 }

@@ -51,6 +51,14 @@ const techStack = [
     name: "Python",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
+  {
+    name: "Solidity",
+    logo: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/solidity.svg",
+  },
+  {
+    name: "Ether.js",
+    logo: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/ethers.svg",
+  },
 ];
 
 function TechStack() {
@@ -76,7 +84,11 @@ function TechStack() {
             <img
               src={tech.logo}
               alt={tech.name}
-              className="w-12 h-12 object-contain "
+              className={`w-12 h-12 object-contain ${
+                tech.name === "Solidity" || tech.name === "Ether.js"
+                  ? "invert"
+                  : ""
+              }`}
             />
             <span className="text-white text-sm">
               {tech.name}

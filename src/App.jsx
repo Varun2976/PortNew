@@ -4,10 +4,26 @@ import './index.css'
 import TechStack from './Techstack.jsx'
 import Experience from './Experience.jsx'
 import Projects from './Projects.jsx'
+import ShapeGrid from './ShapeGrid';
 
 function App() {
   return (
-    <div className="big">
+    <>
+      <ShapeGrid 
+speed={0.5}
+squareSize={40}
+direction='diagonal' // up, down, left, right, diagonal
+borderColor='#fff'
+hoverFillColor='#222'
+shape='square' // square, hexagon, circle, triangle
+hoverTrailAmount={0} // number of trailing hovered shapes (0 = no trail)
+  direction="diagonal"
+  borderColor="#271E37"
+  hoverColor="#222222"
+  size={40}
+  shape="square"
+/>
+      <div className="big">
       <header>
   <h1 className="text-center mt-10 text-3xl sm:text-4xl md:text-5xl font-bitcount text-cyan-300">
     - Varun Nair -
@@ -51,7 +67,8 @@ function App() {
       <Projects/>
       <Experience />
       
-    </div>
+      </div>
+    </>
   )
 }
 

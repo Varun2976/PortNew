@@ -10,19 +10,14 @@ function Normal() {
   return (
     <>
       <ShapeGrid 
-speed={0.5}
-squareSize={40}
-direction='diagonal' // up, down, left, right, diagonal
-borderColor='#fff'
-hoverFillColor='#222'
-shape='square' // square, hexagon, circle, triangle
-hoverTrailAmount={0} // number of trailing hovered shapes (0 = no trail)
-  direction="diagonal"
-  borderColor="#271E37"
-  hoverColor="#222222"
-  size={40}
-  shape="square"
-/>
+        speed={0.5}
+        squareSize={40}
+        direction="diagonal"
+        borderColor="#271E37"
+        hoverFillColor="#222222"
+        shape="square"
+        hoverTrailAmount={0}
+      />
       <div className="big">
       <header>
   <h1 className="text-center mt-10 text-3xl sm:text-4xl md:text-5xl font-bitcount text-cyan-300">

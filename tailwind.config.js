@@ -11,6 +11,9 @@ export default {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
         bitcount: ["'Bitcount Prop Single'", ...defaultTheme.fontFamily.mono],
       },
+      backgroundImage: {
+        'hero' : "url('/src/assets/Bg.png')"
+      }
     },
   },
   plugins: [],

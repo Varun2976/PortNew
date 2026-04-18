@@ -3,14 +3,16 @@ function PS5UI(){
         <div className="text-white">
             <nav className="flex justify-between items-center p-6">
                 {/* Glass effect container for Files */}
-                <ul className="flex items-center px-8 py-3 rounded-2xl bg-white/10 backdrop-blur-md  shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] transition-all duration-500 hover:bg-white/20 hover:backdrop-blur-xl cursor-pointer">
+                <ul className="flex items-center  cursor-pointer gap-20">
                     {/* Left thin bar */}
-                    <div className="w-[2px] h-5 bg-white/40 rounded-full mr-4"></div>
+                    
                     
                     <li className="text-lg tracking-wider font-light">Files</li>
                     
-                    {/* Right thin bar */}
-                    <div className="w-[2px] h-5 bg-white/40 rounded-full ml-4"></div>
+                    <button className="bg-blue-500 px-4 py-2 rounded-2xl hover:bg-blue-600">Want a Normal View ?</button>
+                    
+                    
+                    
                 </ul>
                 
                 <ul className="flex flex-row gap-8 text-white/80 font-light">

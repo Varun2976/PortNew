@@ -4,8 +4,8 @@ const files = [
     title: "Projects",
     desc: "Explore my development work and builds",
     route: "/projects",
-    bg: "/src/assets/project.jpg",     // FULL BACKGROUND
-    cardBg: "/src/assets/Spanner.png", // CARD IMAGE
+    bg: "/src/assets/project.avif",     // FULL BACKGROUND
+    cardBg: "https://img.icons8.com/ios-filled/100/FFFFFF/wrench.png", // CARD IMAGE
     button: "View Projects"
   },
   {

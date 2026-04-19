@@ -4,7 +4,7 @@ const files = [
     title: "Projects",
     desc: "Explore my development work and builds",
     route: "/projects",
-    bg: "/src/assets/project.avif",     // FULL BACKGROUND
+    bg: "/src/assets/project.jpg",     // FULL BACKGROUND
     cardBg: "https://img.icons8.com/ios-filled/100/FFFFFF/wrench.png", // CARD IMAGE
     button: "View Projects"
   },
@@ -22,7 +22,7 @@ const files = [
     title: "Skills",
     desc: "Technologies and tools I work with",
     route: "/skills",
-    bg: "/src/assets/Resume.jpg",
+    bg: "/src/assets/Skills.avif",
     cardBg: "https://img.icons8.com/comic/100/FFFFFF/brain.png",
     button: "View Skills"
   },

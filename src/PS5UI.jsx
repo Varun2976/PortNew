@@ -41,8 +41,8 @@ function PS5UI(){
                 {/* RIGHT CONTAINER */}
                 <div className="flex items-center px-8 py-4 transition-all duration-300">
                     <ul className="flex flex-row gap-8 text-white/90 font-medium text-sm tracking-wide">
-                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer">Settings</li>
-                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer">Profile</li>
+                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl">Settings</li>
+                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl">Socials</li>
                     </ul>
                 </div>
             </nav>
@@ -130,11 +130,11 @@ function PS5UI(){
 
                                 {/* Hover Panel */}
                                 <div className="overflow-hidden max-h-0 group-hover:max-h-[50vh] transition-all duration-500 ease-in-out w-[98vw] max-w-none mt-3">
-                                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-white text-sm shadow-lg w-full h-[50vh]">
+                                    <div className="bg-black/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-white text-sm shadow-lg w-full h-[50vh]">
                                         <h3 className="font-semibold mb-2 text-2xl">GitHub Streak</h3>
 
                                         <img 
-                                            src="https://ghchart.rshah.org/Varun2976"
+                                            src="https://ghchart.rshah.org/39d353/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />

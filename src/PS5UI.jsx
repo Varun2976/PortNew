@@ -131,11 +131,13 @@ function PS5UI(){
                                 {/* Hover Panel */}
                                 <div className="overflow-hidden max-h-0 group-hover:max-h-60 transition-all duration-500 ease-in-out w-72 mt-3">
                                     <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 text-white text-sm shadow-lg">
-                                        <h3 className="font-semibold mb-2">Quick Preview</h3>
-                                        <p className="text-white/80">
-                                            This is a mini page preview. You can add anything here like recent projects,
-                                            shortcuts, or extra info. It smoothly slides up on hover.
-                                        </p>
+                                        <h3 className="font-semibold mb-2">GitHub Streak</h3>
+
+                                        <img 
+                                            src="https://streak-stats.demolab.com?user=Varun2976&theme=dark&hide_border=true"
+                                            alt="GitHub Streak"
+                                            className="rounded-lg w-full"
+                                        />
                                     </div>
                                 </div>
                             </div>

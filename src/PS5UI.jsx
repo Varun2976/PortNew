@@ -129,15 +129,32 @@ function PS5UI(){
                                 </div>
 
                                 {/* Hover Panel */}
-                                <div className="overflow-hidden max-h-0 group-hover:max-h-60 transition-all duration-500 ease-in-out w-72 mt-3">
-                                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 text-white text-sm shadow-lg">
-                                        <h3 className="font-semibold mb-2">GitHub Streak</h3>
+                                <div className="overflow-hidden max-h-0 group-hover:max-h-[50vh] transition-all duration-500 ease-in-out w-[98vw] max-w-none mt-3">
+                                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-white text-sm shadow-lg w-full h-[50vh]">
+                                        <h3 className="font-semibold mb-2 text-2xl">GitHub Streak</h3>
 
                                         <img 
-                                            src="https://streak-stats.demolab.com?user=Varun2976&theme=dark&hide_border=true"
+                                            src="https://ghchart.rshah.org/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />
+                                        <div className="mt-2 flex gap-4 items-stretch">
+                                          <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
+                                            <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+                                              CodeChef
+                                              <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/codechef.png" alt="codechef"/>
+                                            </p>
+                                            <p className="font-semibold text-3xl">2⭐</p>
+                                          </div>
+
+                                          <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
+                                            <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+                                              Codeforces
+                                              <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/48/external-codeforces-programming-competitions-and-contests-programming-community-logo-filled-tal-revivo.png" alt="codeforces"/>
+                                            </p>
+                                            <p className="font-semibold text-3xl">900+</p>
+                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

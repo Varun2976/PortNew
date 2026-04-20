@@ -116,6 +116,29 @@ function PS5UI(){
                                     {current.button || "Play"}
                                 </button>
                             </div>
+                            <div className="position-absolute">
+
+                            </div>
+
+                            {/* ⬇️ Bouncing Arrow with Hover Panel */}
+                            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 group flex flex-col items-center">
+                                
+                                {/* Arrow */}
+                                <div className="animate-bounce cursor-pointer text-white text-3xl">
+                                    ↓
+                                </div>
+
+                                {/* Hover Panel */}
+                                <div className="overflow-hidden max-h-0 group-hover:max-h-60 transition-all duration-500 ease-in-out w-72 mt-3">
+                                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-4 text-white text-sm shadow-lg">
+                                        <h3 className="font-semibold mb-2">Quick Preview</h3>
+                                        <p className="text-white/80">
+                                            This is a mini page preview. You can add anything here like recent projects,
+                                            shortcuts, or extra info. It smoothly slides up on hover.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
 
                         </motion.div>
                     )}

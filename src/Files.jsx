@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+
 export default function Files({ files, active, setActive }) {
   return (
     <div className="flex gap-6 px-10 items-start h-40 pt-4">

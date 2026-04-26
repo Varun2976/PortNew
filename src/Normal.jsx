@@ -6,7 +6,7 @@ import Experience from './Experience.jsx'
 import Projects from './Projects.jsx'
 import ShapeGrid from './ShapeGrid';
 import Flex from './Flex.jsx';
-import Achievements from './Achievements';
+import Achievements from './Achievements.jsx';
 
 function Normal() {
   return (

@@ -5,6 +5,7 @@ import TechStack from './Techstack.jsx'
 import Experience from './Experience.jsx'
 import Projects from './Projects.jsx'
 import ShapeGrid from './ShapeGrid';
+import Flex from './Flex.jsx';
 
 function Normal() {
   return (
@@ -61,6 +62,8 @@ function Normal() {
       <TechStack />
       <Projects/>
       <Experience />
+      <Flex />
+
       
       </div>
     </>

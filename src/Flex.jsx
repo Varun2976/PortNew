@@ -9,7 +9,7 @@ function Flex() {
       <hr className="mb-10 border-cyan-300/30" />
         <div className="grid gap-6 sm:grid-cols-1 ">
         <img 
-                                            src="https://ghchart.rshah.org/274e13/Varun2976"
+                                            src="https://ghchart.rshah.org/006400/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />
@@ -21,7 +21,7 @@ function Flex() {
                                               CodeChef
                                               <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/codechef.png" alt="codechef"/>
                                             </p>
-                                            <p className="font-semibold text-3xl">2⭐</p>
+                                            <p className="font-semibold text-3xl">2 ⭐</p>
                                           </div>
 
                                           <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">

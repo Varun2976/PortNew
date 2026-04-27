@@ -68,8 +68,14 @@ function Achievements() {
       <h2 className="text-left text-4xl font-bitcount text-cyan-300 mb-8 pl-[20px]">
         Hackathons And Competitions
       </h2>
-
+      
       <hr className="mb-6 border-cyan-300/30" />
+      <h2 className="text-center text-4xl font-bitcount text-white-300 mb-2 pl-[20px]">
+        Hover Over Me
+      </h2>
+      <div className="animate-bounce cursor-pointer text-white text-3xl text-center mb-6">
+                                    ↓
+      </div>
         <div className="w-full max-w-7xl mx-auto">
             <div style={{ height: '600px', position: 'relative' }}>
                 <ChromaGrid 

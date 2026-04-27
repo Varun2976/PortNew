@@ -8,6 +8,7 @@ import ShapeGrid from './ShapeGrid';
 import Flex from './Flex.jsx';
 import Achievements from './Achievements.jsx';
 
+
 function Normal() {
   return (
     <>

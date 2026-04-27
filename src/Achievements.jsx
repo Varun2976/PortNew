@@ -5,6 +5,7 @@ import hackx from "./assets/hackx.webp";
 import agri from "./assets/agri.webp";
 import gdg from "./assets/gdg.webp";
 import NN from "./assets/NN.png";
+
 const items = [
   {
     image: cc,

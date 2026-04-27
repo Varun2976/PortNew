@@ -3,14 +3,54 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Normal from './Normal';
 import Files from './Files';
 import filesData from './FilesData';
+import introVid from "./assets/startup.mp4";
 
 function PS5UI(){
+    const [showIntro, setShowIntro] = useState(true);
+    const [slideOut, setSlideOut] = useState(false);
+
+    const handleIntroClose = () => {
+      setSlideOut(true);
+      setTimeout(() => {
+        setShowIntro(false);
+      }, 1800);
+    };
     const [view, setView] = useState('ps5');
     const [activeFile, setActiveFile] = useState(0);
 
     const current = filesData[activeFile] || filesData[0];
 
     return(
+      <>
+        {showIntro && (
+          <div
+            onClick={handleIntroClose}
+            className="fixed inset-0 z-[9999] bg-black flex items-center justify-center cursor-pointer overflow-hidden"
+          >
+
+            <video
+              autoPlay
+              muted
+              playsInline
+              loop
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src={introVid} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
+
+            <div
+              className={`absolute inset-0 bg-black transition-opacity duration-[1800ms] ease-in-out ${
+                slideOut ? "opacity-100" : "opacity-0"
+              }`}
+            ></div>
+
+            
+          </div>
+        )}
+
         <div className={`text-white flex flex-col bg-black relative ${view === 'ps5' ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
             
             {/* NAVBAR */}
@@ -164,6 +204,7 @@ function PS5UI(){
                 </AnimatePresence>
             </main>
         </div>
+      </>
     );
 }
 

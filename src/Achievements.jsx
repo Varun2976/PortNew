@@ -4,6 +4,7 @@ import iicpc from "./assets/iicpc.webp";
 import hackx from "./assets/hackx.webp";
 import agri from "./assets/agri.webp";
 import gdg from "./assets/gdg.webp";
+import NN from "./assets/NN.png";
 const items = [
   {
     image: cc,
@@ -51,18 +52,9 @@ const items = [
     url: "https://linkedin.com/in/mikechen"
   },
   {
-    image: "https://i.pravatar.cc/300?img=2",
+    image: NN,
     title: " ",
-    subtitle: "Ranked Top 3000 out of 50,000+ participants in ICPC India Regional Programming Contest (IICPC)",
-    
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://linkedin.com/in/mikechen"
-  },
-  {
-    image: "https://i.pravatar.cc/300?img=2",
-    title: " ",
-    subtitle: "Ranked Top 3000 out of 50,000+ participants in ICPC India Regional Programming Contest (IICPC)",
+    subtitle: "Built Rapid3, an ML-based sandbox system to detect and block phishing",
     
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",

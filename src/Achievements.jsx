@@ -1,7 +1,8 @@
 import ChromaGrid from './ChromaGrid';
 import cc from "./assets/cc.jpg";
 import iicpc from "./assets/iicpc.webp";
-import hackx from "./assets/hackx.webp"
+import hackx from "./assets/hackx.webp";
+import agri from "./assets/agri.webp";
 const items = [
   {
     image: cc,
@@ -31,9 +32,9 @@ const items = [
     url: "https://linkedin.com/in/mikechen"
   },
   {
-    image: "https://i.pravatar.cc/300?img=2",
+    image: agri,
     title: " ",
-    subtitle: "Ranked Top 3000 out of 50,000+ participants in ICPC India Regional Programming Contest (IICPC)",
+    subtitle: "Built a blockchain-based app connecting farmers, distributors, and sellers",
     
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",

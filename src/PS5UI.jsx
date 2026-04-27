@@ -8,11 +8,13 @@ import introVid from "./assets/startup.mp4";
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
     const [slideOut, setSlideOut] = useState(false);
+    const [screenReveal, setScreenReveal] = useState(false);
 
     const handleIntroClose = () => {
       setSlideOut(true);
       setTimeout(() => {
         setShowIntro(false);
+        setScreenReveal(true);
       }, 1800);
     };
     const [view, setView] = useState('ps5');
@@ -30,7 +32,7 @@ function PS5UI(){
 
             <video
               autoPlay
-              muted
+              
               playsInline
               loop
               preload="auto"
@@ -52,7 +54,13 @@ function PS5UI(){
         )}
 
         <div className={`text-white flex flex-col bg-black relative ${view === 'ps5' ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
-            
+          
+          <div
+            className={`fixed inset-0 z-[9998] bg-black pointer-events-none transition-opacity duration-[1800ms] ease-in-out ${
+              screenReveal ? "opacity-0" : "opacity-100"
+            }`}
+          ></div>
+
             {/* NAVBAR */}
             <nav className={`flex justify-between items-center p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
                 

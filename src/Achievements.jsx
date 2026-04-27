@@ -3,6 +3,7 @@ import cc from "./assets/cc.jpg";
 import iicpc from "./assets/iicpc.webp";
 import hackx from "./assets/hackx.webp";
 import agri from "./assets/agri.webp";
+import gdg from "./assets/gdg.webp";
 const items = [
   {
     image: cc,
@@ -41,9 +42,9 @@ const items = [
     url: "https://linkedin.com/in/mikechen"
   },
   {
-    image: "https://i.pravatar.cc/300?img=2",
+    image: gdg,
     title: " ",
-    subtitle: "Ranked Top 3000 out of 50,000+ participants in ICPC India Regional Programming Contest (IICPC)",
+    subtitle: "Developed a Railway Concession App to digitize approval workflows",
     
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",

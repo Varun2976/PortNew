@@ -52,6 +52,10 @@ const techStack = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
+    name: "Ruby",
+    logo: "https://cdn.simpleicons.org/ruby",
+  },
+  {
     name: "Solidity",
     logo: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/solidity.svg",
   },
@@ -59,6 +63,10 @@ const techStack = [
     name: "Ether.js",
     logo: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/ethers.svg",
   },
+   {
+    name: "Ruby On Rails",
+    logo: "https://cdn.simpleicons.org/rubyonrails",
+  }
 ];
 
 function TechStack() {

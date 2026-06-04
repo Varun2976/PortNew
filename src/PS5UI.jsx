@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Normal from './Normal';
 import Files from './Files';
 import filesData from './FilesData';
-import introVid from "./assets/startup.mp4";
+
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -30,26 +30,49 @@ function PS5UI(){
             className="fixed inset-0 z-[9999] bg-black flex items-center justify-center cursor-pointer overflow-hidden"
           >
 
-            <video
-              autoPlay
-              
-              playsInline
-              loop
-              preload="auto"
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src={introVid} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
+            <div className="absolute inset-0 bg-black"></div>
+
+            <div className="absolute inset-0 overflow-hidden">
+              {[...Array(40)].map((_, i) => (
+                <span
+                  key={i}
+                  className="absolute w-[2px] h-[2px] bg-white rounded-full animate-pulse"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    opacity: 0.2 + Math.random() * 0.8,
+                    animationDuration: `${5 + Math.random() * 6}s`,
+                  }}
+                ></span>
+              ))}
+            </div>
+
+            <div className="relative flex items-center justify-center">
+
+              <div className="absolute w-40 h-40 rounded-full border border-white/90 shadow-[0_0_35px_rgba(255,255,255,0.9)] animate-[ping_5.5s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+
+              <div className="absolute w-40 h-40 rounded-full border border-white/70 shadow-[0_0_50px_rgba(255,255,255,0.7)] animate-[ping_5.5s_cubic-bezier(0,0,0.2,1)_infinite_1.8s]"></div>
+
+              <div className="absolute w-40 h-40 rounded-full border border-white/50 shadow-[0_0_65px_rgba(255,255,255,0.5)] animate-[ping_5.5s_cubic-bezier(0,0,0.2,1)_infinite_3.6s]"></div>
+
+              <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-[0_0_45px_rgba(255,255,255,0.95)] z-10">
+                <img
+                  src="src/assets/ps.png"
+                  alt="PS Logo"
+                  className="w-14 h-14 object-contain brightness-0"
+                />
+              </div>
+            </div>
+
+            <div className="absolute bottom-24 text-white text-lg tracking-[0.3em] uppercase font-light animate-[pulse_3.5s_ease-in-out_infinite]">
+              Click On The Centre To Enter
+            </div>
 
             <div
               className={`absolute inset-0 bg-black transition-opacity duration-[1800ms] ease-in-out ${
                 slideOut ? "opacity-100" : "opacity-0"
               }`}
             ></div>
-
-            
           </div>
         )}
 
@@ -182,7 +205,7 @@ function PS5UI(){
                                         <h3 className="font-semibold mb-2 text-2xl">GitHub Streak</h3>
 
                                         <img 
-                                            src="https://ghchart.rshah.org/39d353/Varun2976"
+                                            src="https://ghchart.rshah.org/006400/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />

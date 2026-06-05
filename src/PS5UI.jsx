@@ -205,7 +205,7 @@ function PS5UI(){
                                         <h3 className="font-semibold mb-2 text-2xl">GitHub Streak</h3>
 
                                         <img 
-                                            src="https://ghchart.rshah.org/006400/Varun2976"
+                                            src="https://ghchart.rshah.org/208637/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />

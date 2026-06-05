@@ -1,4 +1,6 @@
 
+import { GitHubCalendar } from "react-github-calendar";
+
 
 function Flex() {
     return(<section className="max-w-6xl mx-auto mt-32 px-6 py-8">
@@ -8,11 +10,13 @@ function Flex() {
 
       <hr className="mb-10 border-cyan-300/30" />
         <div className="grid gap-6 sm:grid-cols-1 ">
-        <img 
-                                            src="https://ghchart.rshah.org/006400/Varun2976"
-                                            alt="GitHub Streak"
-                                            className="rounded-lg w-full"
-                                        />
+       <GitHubCalendar
+  username="Varun2976"
+  theme={{
+    light: ["#1a1a1a", "#0e4429", "#006d32", "#26a641", "#39d353"],
+    dark: ["#1a1a1a", "#0e4429", "#006d32", "#26a641", "#39d353"],
+  }}
+/>
       </div>
       
                                         <div className="mt-2 flex gap-4 items-stretch mt-4">

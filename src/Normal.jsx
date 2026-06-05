@@ -7,9 +7,25 @@ import Projects from './Projects.jsx'
 import ShapeGrid from './ShapeGrid';
 import Flex from './Flex.jsx';
 import Achievements from './Achievements.jsx';
+import { animate, scrambleText } from 'animejs';
+import { useEffect } from 'react';
+
 
 
 function Normal() {
+    useEffect(() => {
+
+    animate('#role', {
+
+      innerHTML: scrambleText(),
+      duration: 200,
+      
+
+      loopDelay: 200,
+
+    });
+
+  }, []);
   return (
     <>
       <ShapeGrid 
@@ -35,17 +51,17 @@ function Normal() {
     className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-top border-2 border-cyan-300 mt-6 lg:mt-10 mx-auto lg:ml-[90px]"
   />
 
-  <div className="flex-1 lg:ml-10 mt-6 lg:mt-0 text-center lg:text-left">
-    <h2 className="text-green-500 mb-2 mt-4 lg:mt-6 text-2xl sm:text-3xl md:text-4xl">
+  <div className="flex-1 flex-col lg:ml-10 mt-6 lg:mt-0 text-center lg:text-left">
+    <h2 className="font-blackops text-green-500 mb-2 mt-4 lg:mt-6 text-2xl sm:text-3xl md:text-4xl">
       ABOUT ME
     </h2>
 
-    <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-justify">
+    <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-justify min-h-[150px]" >
       I am pursuing Information Technology at KJ Somaiya. I am a tech enthusiast
       and a quick learner with a strong interest in learning new programming
       languages and technologies. I am passionate about understanding PC hardware
       and enjoy working in collaborative team environments. Additionally, I have
-      a keen interest in competitive programming and continuously strive to
+      a keen interest in <span id="role" className="font-blackops text-green-500">competitive programming</span> and continuously strive to
       improve my problem-solving skills.
     </p>
 
@@ -54,9 +70,12 @@ function Normal() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className="text-green-800 text-sm sm:text-base md:text-[20px] border-2 border-green-800 px-6 py-2 rounded-[30px] mt-6 font-mono hover:bg-green-800 hover:text-black transition">
+      
+        <button className="text-green-800 text-sm sm:text-base md:text-[20px] border-2 border-green-800 px-6 py-2 rounded-[30px] mt-9 font-mono hover:bg-green-800 hover:text-black transition">
         Resume
       </button>
+      
+      
     </a>
   </div>
 </div>

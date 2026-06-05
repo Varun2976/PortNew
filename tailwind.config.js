@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
         bitcount: ["'Bitcount Prop Single'", ...defaultTheme.fontFamily.mono],
+        blackops: ["'Black Ops One'", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         'hero' : "url('/src/assets/Bg.png')"

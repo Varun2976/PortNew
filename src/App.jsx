@@ -12,6 +12,7 @@ function App() {
         {/* Normal portfolio */}
         <Route path="/normal" element={<Normal />} />
       </Routes>
+    
     </BrowserRouter>
   );
 }

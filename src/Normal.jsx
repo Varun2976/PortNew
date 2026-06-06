@@ -18,10 +18,10 @@ function Normal() {
     animate('#role', {
 
       innerHTML: scrambleText(),
-      duration: 200,
+      duration: 1000,
       
 
-      loopDelay: 200,
+      loopDelay: 1000,
 
     });
 

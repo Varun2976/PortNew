@@ -4,7 +4,7 @@ import Normal from './Normal';
 import Files from './Files';
 import filesData from './FilesData';
 import {useEffect } from 'react';
-
+import MarioGame from './MarioGame';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -38,6 +38,9 @@ function PS5UI(){
             prev === 0 ?filesData.length - 1  : prev - 1
           );
         }
+        if (e.key === 'Enter' && current.title === 'Play') {
+          setView('mario');
+}
       };
 
       window.addEventListener('keydown',Arrow);
@@ -45,7 +48,7 @@ function PS5UI(){
       return() => {
         window.removeEventListener('keydown',Arrow);
       };
-    },[view]);
+    },[view,current]);
 
 
     return(
@@ -160,7 +163,31 @@ function PS5UI(){
                         >
                             <Normal />
                         </motion.div>
-                    ) : (
+                    ) : view === 'mario' ? (
+
+                          <motion.div
+
+                            key="mario"
+
+                            initial={{ opacity: 0 }}
+
+                            animate={{ opacity: 1 }}
+
+                            exit={{ opacity: 0 }}
+
+                            transition={{ duration: 0.6 }}
+
+                            className="relative z-10 w-full flex-1"
+
+                          >
+
+                            <MarioGame />
+
+                          </motion.div>
+
+) : 
+                    
+                    (
 
                         /* PS5 VIEW */
                         <motion.div

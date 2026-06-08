@@ -4,7 +4,7 @@ import Normal from './Normal';
 import Files from './Files';
 import filesData from './FilesData';
 import {useEffect } from 'react';
-import MarioGame from '../public/MarioGame';
+import MarioGame from './MarioGame';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);

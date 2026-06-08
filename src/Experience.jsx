@@ -18,7 +18,7 @@ function Experience() {
   return (
     <section className="max-w-6xl mx-auto mt-32 px-6 py-8 rounded-[25px]">
       <h2 className="text-left text-4xl font-bitcount text-cyan-300 mb-8 pl-[20px]">
-        Experience
+        Experience<span className="text-white"> (Hover For Details)</span>
       </h2>
 
       <hr className="mb-6 border-cyan-300/30" />

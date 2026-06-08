@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Normal from './Normal';
 import Files from './Files';
 import filesData from './FilesData';
+import {useEffect } from 'react';
 
 
 function PS5UI(){
@@ -21,6 +22,31 @@ function PS5UI(){
     const [activeFile, setActiveFile] = useState(0);
 
     const current = filesData[activeFile] || filesData[0];
+
+    useEffect(() =>{
+      const Arrow =(e) => {
+        if(view !== 'ps5') return;
+
+        if(e.key ==='ArrowRight'){
+          setActiveFile((prev)=>
+            prev === filesData.length - 1 ? 0 : prev + 1
+          )
+        }
+
+        if(e.key ==='ArrowLeft'){
+          setActiveFile((prev)=>
+            prev === 0 ?filesData.length - 1  : prev - 1
+          );
+        }
+      };
+
+      window.addEventListener('keydown',Arrow);
+
+      return() => {
+        window.removeEventListener('keydown',Arrow);
+      };
+    },[view]);
+
 
     return(
       <>
@@ -195,7 +221,8 @@ function PS5UI(){
                             <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 group flex flex-col items-center">
                                 
                                 {/* Arrow */}
-                                <div className="animate-bounce cursor-pointer text-white text-3xl">
+                                <div className="flex flex-col gap-1 text-center justify-center animate-bounce cursor-pointer text-white text-3xl">
+                                  <h4 className = "font-blackops">Hover</h4><br></br>
                                     ↓
                                 </div>
 

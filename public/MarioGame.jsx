@@ -1,7 +1,7 @@
 function MarioGame() {
   return (
     <iframe
-      src="src/mario/index.html"
+      src="/mario/index.html"
       className="w-full h-screen border-none"
       title="Mario"
     />

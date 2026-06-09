@@ -103,3 +103,49 @@
   height: 40px;
   border-radius: 10px;
 }
+.shine {
+  overflow: hidden;
+}
+
+.shine::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 60%;
+  height: 220%;
+
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255,255,255,0.05) 30%,
+    rgba(255, 255, 255, 0.552) 45%,
+    rgba(255, 255, 255, 0.922) 50%,
+    rgba(255, 255, 255, 0.465) 55%,
+    rgba(255,255,255,0.05) 70%,
+    transparent 100%
+  );
+
+  backdrop-filter: blur(4px);
+  filter: blur(8px);
+
+  transform: rotate(20deg);
+
+  animation: glassSweep 1.2s ease-out forwards;
+}
+
+@keyframes glassSweep {
+  0% {
+    left: -180%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 250%;
+    opacity: 0;
+  }
+}

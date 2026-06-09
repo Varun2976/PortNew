@@ -114,7 +114,8 @@ function PS5UI(){
           ></div>
 
             {/* NAVBAR */}
-            <nav className={`flex justify-between items-center p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
+            {view !== 'mario' && (
+              <nav className={`flex justify-between items-center p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
                 
                 {/* LEFT CONTAINER */}
                 <div className="flex items-center gap-6 px-8 py-3 transition-all duration-300">
@@ -146,6 +147,8 @@ function PS5UI(){
                     </ul>
                 </div>
             </nav>
+            )}
+            
 
             {/* MAIN */}
             <main className="flex-1 relative z-10 flex flex-col">

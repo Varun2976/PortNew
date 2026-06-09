@@ -25,8 +25,8 @@ export default function Files({ files, active, setActive }) {
               originX: 0,
               originY: 0,
               backgroundImage: file.cardBg ? `url(${file.cardBg})` : 'none',
-              backgroundColor: '#000',
-              backgroundSize: '50%',
+              backgroundColor: file.cardColor || '#000',
+              backgroundSize: file.cardSize || '50%',
               backgroundRepeat: 'no-repeat'
             }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
@@ -35,6 +35,17 @@ export default function Files({ files, active, setActive }) {
             {file.cardBg && (
               <div className="absolute inset-0 bg-black/40" />
             )}
+            <div
+
+              className={`
+
+                absolute inset-0 pointer-events-none
+
+                ${isActive ? "shine" : ""}
+
+              `}
+
+            />
 
             {/* Title */}
             <span className="relative z-10 text-white font-semibold text-sm">

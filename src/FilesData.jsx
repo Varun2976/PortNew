@@ -1,10 +1,16 @@
+import projectBg from './assets/project.avif';
+import resumeBg from './assets/Resume.jpg';
+import skillsBg from './assets/Skills.avif';
+import marioBg from './assets/Mariogame.png';
+import MarioIcon from './assets/MarioIcon.jpeg';
+
 const files = [
   {
     id: 1,
     title: "Projects",
     desc: "Explore my development work and builds",
     route: "/projects",
-    bg: "/src/assets/project.avif",     // FULL BACKGROUND
+    bg: projectBg,     // FULL BACKGROUND
     cardBg: "https://img.icons8.com/ios-filled/100/FFFFFF/wrench.png", // CARD IMAGE
     button: "View Projects"
   },
@@ -13,7 +19,7 @@ const files = [
     title: "Resume",
     desc: "Check out my experience and skills",
     route: "/normal",
-    bg: "/src/assets/Resume.jpg",
+    bg: resumeBg,
     cardBg: "https://img.icons8.com/ios-filled/100/FFFFFF/document--v1.png",
     button: "Open Resume"
   },
@@ -22,7 +28,7 @@ const files = [
     title: "Skills",
     desc: "Technologies and tools I work with",
     route: "/skills",
-    bg: "/src/assets/Skills.avif",
+    bg: skillsBg,
     cardBg: "https://img.icons8.com/comic/100/FFFFFF/brain.png",
     button: "View Skills"
   },
@@ -30,10 +36,12 @@ const files = [
     id: 4,
     title: "Play",
     desc: "Try my interactive game experience",
-    route: "/game",
-    bg: "/images/game-bg.jpg",
-    cardBg: "/images/game-card.jpg",
+    route: "assets/Mariogame.png",
+    bg: marioBg,
+    cardBg: MarioIcon,
+    cardSize: 'cover',
     button: "Play Game"
+
   }
 ];
 

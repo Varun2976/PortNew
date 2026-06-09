@@ -1,4 +1,4 @@
-import pfp from './assets/pfp.jpg'
+import pfp1 from './assets/pfp1.png'
 import './App.css'
 import './index.css'
 import TechStack from './Techstack.jsx'
@@ -9,7 +9,7 @@ import Flex from './Flex.jsx';
 import Achievements from './Achievements.jsx';
 import { animate, scrambleText } from 'animejs';
 import { useEffect } from 'react';
-
+import ProfileCard from './components/ProfileCard';
 
 
 function Normal() {
@@ -45,11 +45,22 @@ function Normal() {
 </header>
 
 <div className="flex-custom-row flex-col lg:flex-row rounded-[30px] border-cyan-300 max-w-7xl mx-auto mt-10 lg:mt-20 px-4">
-  <img
-    src={pfp}
-    alt="Profile"
-    className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-top border-2 border-cyan-300 mt-6 lg:mt-10 mx-auto lg:ml-[90px]"
-  />
+  <ProfileCard
+  name="Varun Nair"
+  title="Software Engineer"
+  handle="javicodes"
+  status="Online"
+  contactText="Contact Me"
+  avatarUrl={pfp1}
+  showUserInfo={false}
+  enableTilt={true}
+  enableMobileTilt
+  onContactClick={() => console.log('Contact clicked')}
+  behindGlowColor="rgba(125, 190, 255, 0.67)"
+  iconUrl="/assets/demo/iconpattern.png"
+  behindGlowEnabled
+  innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+/>
 
   <div className="flex-1 flex-col lg:ml-10 mt-6 lg:mt-0 text-center lg:text-left">
     <h2 className="font-blackops text-green-500 mb-2 mt-4 lg:mt-6 text-2xl sm:text-3xl md:text-4xl">

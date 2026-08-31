@@ -10,7 +10,7 @@ import Achievements from './Achievements.jsx';
 import { animate, scrambleText } from 'animejs';
 import { useEffect } from 'react';
 import ProfileCard from './components/ProfileCard';
-
+import Resume from './assets/VarunNairResume.pdf'
 
 function Normal() {
     useEffect(() => {
@@ -77,7 +77,7 @@ function Normal() {
     </p>
 
     <a
-      href="https://drive.google.com/file/d/1hmZFJ7z9OMAXxnncU5Y6V3JtAzxShBZG/view?usp=sharing"
+      href={Resume}
       target="_blank"
       rel="noopener noreferrer"
     >

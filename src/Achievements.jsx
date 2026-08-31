@@ -5,6 +5,8 @@ import hackx from "./assets/hackx.webp";
 import agri from "./assets/agri.webp";
 import gdg from "./assets/gdg.webp";
 import NN from "./assets/NN.png";
+import SIH26 from "./assets/SIH.png";
+
 
 const items = [
   {
@@ -20,6 +22,15 @@ const items = [
     image: iicpc,
     title: " ",
     subtitle: "Ranked Top 3000 out of 50,000+ participants in ICPC India Regional Programming Contest (IICPC)",
+    
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://linkedin.com/in/mikechen"
+  },
+  {
+    image: SIH26,
+    title: " ",
+    subtitle: "Built a blockchain and ML-powered platform for cross-border B2B trade, enabling secure, transparent transactions with intelligent data-driven insights.",
     
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",

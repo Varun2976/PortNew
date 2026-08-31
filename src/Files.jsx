@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 
-export default function Files({ files, active, setActive }) {
+export default function Files({ files, active, setActive, onSelect }) {
   return (
     <div className="flex gap-6 px-10 items-start h-40 pt-4">
       {files.map((file, index) => {
@@ -12,6 +12,10 @@ export default function Files({ files, active, setActive }) {
             layout
             key={file.id}
             onMouseEnter={() => setActive(index)}
+            onClick={() => {
+              setActive(index);
+              onSelect?.(file, index);
+            }}
             className={`
               rounded-2xl flex items-end justify-start p-3
               cursor-pointer bg-center relative overflow-hidden

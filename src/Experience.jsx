@@ -11,7 +11,7 @@ const experience = [
   },
   {
     place: "ISTE",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
   },
 ];
 

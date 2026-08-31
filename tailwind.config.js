@@ -11,6 +11,7 @@ export default {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
         bitcount: ["'Bitcount Prop Single'", ...defaultTheme.fontFamily.mono],
         blackops: ["'Black Ops One'", ...defaultTheme.fontFamily.sans],
+        arcade: ["'Press Start 2P'", ...defaultTheme.fontFamily.mono],
       },
       backgroundImage: {
         'hero' : "url('/src/assets/Bg.png')"

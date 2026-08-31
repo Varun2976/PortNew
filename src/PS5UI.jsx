@@ -5,6 +5,8 @@ import Files from './Files';
 import filesData from './FilesData';
 import {useEffect } from 'react';
 import MarioGame from './MarioGame';
+import Socials from './Socials';
+import ProjectsPage from './ProjectsPage';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -20,12 +22,26 @@ function PS5UI(){
     };
     const [view, setView] = useState('ps5');
     const [activeFile, setActiveFile] = useState(0);
+    const [showSocials, setShowSocials] = useState(false);
 
     const current = filesData[activeFile] || filesData[0];
 
+    // Card / button -> destination view
+    const openFile = (file) => {
+      if (!file) return;
+
+      if (file.title === 'Projects') {
+        setView('projects');
+      } else if (file.title === 'Play') {
+        setView('mario');
+      } else {
+        setView('normal');
+      }
+    };
+
     useEffect(() =>{
       const Arrow =(e) => {
-        if(view !== 'ps5') return;
+        if(view !== 'ps5' || showSocials) return;
 
         if(e.key ==='ArrowRight'){
           setActiveFile((prev)=>
@@ -38,9 +54,9 @@ function PS5UI(){
             prev === 0 ?filesData.length - 1  : prev - 1
           );
         }
-        if (e.key === 'Enter' && current.title === 'Play') {
-          setView('mario');
-}
+        if (e.key === 'Enter') {
+          openFile(current);
+        }
       };
 
       window.addEventListener('keydown',Arrow);
@@ -48,7 +64,7 @@ function PS5UI(){
       return() => {
         window.removeEventListener('keydown',Arrow);
       };
-    },[view,current]);
+    },[view,current,showSocials]);
 
 
     return(
@@ -114,7 +130,7 @@ function PS5UI(){
           ></div>
 
             {/* NAVBAR */}
-            {view !== 'mario' && (
+            {view !== 'mario' && view !== 'projects' && (
               <nav className={`flex justify-between items-center p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
                 
                 {/* LEFT CONTAINER */}
@@ -143,7 +159,12 @@ function PS5UI(){
                 <div className="flex items-center px-8 py-4 transition-all duration-300">
                     <ul className="flex flex-row gap-8 text-white/90 font-medium text-sm tracking-wide">
                         <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl">Settings</li>
-                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl">Socials</li>
+                        <li
+                          className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl"
+                          onClick={() => setShowSocials(true)}
+                        >
+                          Socials
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -188,8 +209,21 @@ function PS5UI(){
 
                           </motion.div>
 
-) : 
-                    
+) : view === 'projects' ? (
+
+                          <motion.div
+                            key="projects"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="relative z-10 w-full flex-1"
+                          >
+                            <ProjectsPage onBack={() => setView('ps5')} />
+                          </motion.div>
+
+) :
+
                     (
 
                         /* PS5 VIEW */
@@ -218,10 +252,11 @@ function PS5UI(){
 
                             {/* 🎮 Top Cards */}
                             <div className="relative pt-28 z-10 w-full">
-                                <Files 
-                                    files={filesData} 
-                                    active={activeFile} 
-                                    setActive={setActiveFile} 
+                                <Files
+                                    files={filesData}
+                                    active={activeFile}
+                                    setActive={setActiveFile}
+                                    onSelect={openFile}
                                 />
                             </div>
 
@@ -237,7 +272,7 @@ function PS5UI(){
                                 </p>
 
                                 <button
-                                    onClick={() => setView('normal')}
+                                    onClick={() => openFile(current)}
                                     className="px-8 py-3 bg-white text-black rounded-full font-bold hover:scale-105 transition shadow-lg"
                                 >
                                     {current.button || "Play"}
@@ -292,6 +327,8 @@ function PS5UI(){
                 </AnimatePresence>
             </main>
         </div>
+
+        <Socials open={showSocials} onClose={() => setShowSocials(false)} />
       </>
     );
 }

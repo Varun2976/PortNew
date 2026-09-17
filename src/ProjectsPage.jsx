@@ -208,10 +208,64 @@ function ProjectsPage({ onBack }) {
         {projects.map((project, index) => {
           const ghost = GHOSTS[index % GHOSTS.length];
           const ghostName = GHOST_NAMES[index % GHOST_NAMES.length];
+          const cardLink = project.links?.[0]?.url;
+
+          const cardContent = (
+            <motion.div
+              className="pac-card relative"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              onViewportEnter={() => setScore((s) => s + 100)}
+              whileHover={{ scale: 1.015 }}
+            >
+              <div className="pac-wall relative bg-black p-6 md:p-8">
+                {/* score popup */}
+                <span className="font-arcade text-[9px] text-[#00ffff] absolute right-4 top-4">
+                  +100
+                </span>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex flex-col items-center gap-2 pt-1">
+                    <Ghost color={ghost} size={38} />
+                    <span
+                      className="font-arcade text-[7px]"
+                      style={{ color: ghost }}
+                    >
+                      {ghostName}
+                    </span>
+                  </div>
+
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <span className="font-arcade text-[9px] text-white/50">
+                        LEVEL {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Pellet />
+                        <Pellet />
+                        <Pellet />
+                      </span>
+                    </div>
+
+                    <h3 className="font-arcade text-sm md:text-xl text-[#ffd800] mt-4 leading-relaxed">
+                      {project.title.toUpperCase()}
+                    </h3>
+
+                    <div className="my-4 h-[3px] w-full bg-[#2121ff]" />
+
+                    <p className="text-white/85 text-base md:text-lg leading-relaxed font-mono">
+                      {project.summary}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          );
 
           return (
             <div key={index}>
-              {/* corridor pellets between maze blocks */}
               {index > 0 && (
                 <div className="flex flex-col items-center gap-2 py-5">
                   {[...Array(3)].map((_, d) => (
@@ -220,57 +274,19 @@ function ProjectsPage({ onBack }) {
                 </div>
               )}
 
-              <motion.div
-                className="pac-card relative"
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-                onViewportEnter={() => setScore((s) => s + 100)}
-                whileHover={{ scale: 1.015 }}
-              >
-                <div className="pac-wall relative bg-black p-6 md:p-8">
-                  {/* score popup */}
-                  <span className="font-arcade text-[9px] text-[#00ffff] absolute right-4 top-4">
-                    +100
-                  </span>
-
-                  <div className="flex items-start gap-4">
-                    <div className="flex flex-col items-center gap-2 pt-1">
-                      <Ghost color={ghost} size={38} />
-                      <span
-                        className="font-arcade text-[7px]"
-                        style={{ color: ghost }}
-                      >
-                        {ghostName}
-                      </span>
-                    </div>
-
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 flex-wrap">
-                        <span className="font-arcade text-[9px] text-white/50">
-                          LEVEL {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Pellet />
-                          <Pellet />
-                          <Pellet />
-                        </span>
-                      </div>
-
-                      <h3 className="font-arcade text-sm md:text-xl text-[#ffd800] mt-4 leading-relaxed">
-                        {project.title.toUpperCase()}
-                      </h3>
-
-                      <div className="my-4 h-[3px] w-full bg-[#2121ff]" />
-
-                      <p className="text-white/85 text-base md:text-lg leading-relaxed font-mono">
-                        {project.summary}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+              {cardLink ? (
+                <a
+                  href={cardLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block"
+                  aria-label={`Open ${project.title}`}
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                cardContent
+              )}
             </div>
           );
         })}

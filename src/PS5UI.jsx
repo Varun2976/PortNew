@@ -7,6 +7,7 @@ import {useEffect } from 'react';
 import MarioGame from './MarioGame';
 import Socials from './Socials';
 import ProjectsPage from './ProjectsPage';
+import ResumePage from './ResumePage';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -32,6 +33,8 @@ function PS5UI(){
 
       if (file.title === 'Projects') {
         setView('projects');
+      } else if (file.title === 'Resume') {
+        setView('resume');
       } else if (file.title === 'Play') {
         setView('mario');
       } else {
@@ -220,6 +223,19 @@ function PS5UI(){
                             className="relative z-10 w-full flex-1"
                           >
                             <ProjectsPage onBack={() => setView('ps5')} />
+                          </motion.div>
+
+) : view === 'resume' ? (
+
+                          <motion.div
+                            key="resume"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="relative z-10 w-full flex-1"
+                          >
+                            <ResumePage onBack={() => setView('ps5')} />
                           </motion.div>
 
 ) :

@@ -4,7 +4,7 @@ const projects = [
     summary:
       "A full-stack AI + Blockchain trade platform for secure cross-border transactions, combining ML-based fraud/risk detection, OCR-powered document processing, blockchain smart contracts, and Supabase-backed data infrastructure into a unified trade management system.",
     links: [
-      { label: "Project Link", url: "https://example.com" },
+      { label: "Project Link", url: "https://github.com/MihirPetkar108/GlobeX" },
     ],
   },
   {
@@ -12,7 +12,7 @@ const projects = [
     summary:
       "Developed Rapid3, a browser extension and web app for detecting phishing and malicious content across links, emails, SMS, and audio. Implemented a sandbox-based system to safely execute and analyze URLs before user access. Integrated ML models for real-time threat detection, including phishing and deepfake audio identification. Designed the system to block unsafe links and provide clear risk assessments.",
     links: [
-      { label: "Project Link", url: "https://example.com" },
+      { label: "Project Link", url: "https://github.com/hmf09xoxo-design/Neural-Nexus" },
     ],
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     summary:
       "An AI vocal coach that analyzes your singing in real time by comparing it with a reference track, evaluating pitch, timing, and vocal consistency, and providing instant feedback on note accuracy along with guidance on vocal placement and technique to help you improve.",
     links: [
-      { label: "Project Link", url: "https://example.com" },
+      { label: "Project Link", url: "https://github.com/Atharva44-Tech/music" },
     ],
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     summary:
       "Developed a blockchain-based supply chain application connecting farmers, distributors, retailers, and consumers. Implemented smart contracts to automate agreements, ensure secure record-keeping, and enable traceability of agricultural goods.",
     links: [
-      { label: "Project Link", url: "https://example.com" },
+      { label: "Project Link", url: "https://github.com/BhavyaShah0209/Farm-to-Fork_TM" },
     ],
   },
   {

@@ -15,14 +15,7 @@ function ResumePage({ onBack }) {
 
       <div className="relative mx-auto max-w-6xl">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-          <button
-            type="button"
-            onClick={onBack}
-            className="inline-flex items-center gap-2 border border-cyan-300/40 bg-cyan-300/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/20"
-          >
-            <ArrowLeft size={16} />
-            Back to hub
-          </button>
+          
 
           <a
             href={resumeFile}
@@ -39,7 +32,7 @@ function ResumePage({ onBack }) {
             <Sparkles size={15} />
             Mission archive // unlocked
           </p>
-          <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">Resume dossier</h1>
+          
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
             A quick scan of Varun Nair&apos;s skills, experience, and next-level builds.
           </p>

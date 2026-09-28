@@ -139,11 +139,21 @@ function PS5UI(){
                 {/* LEFT CONTAINER */}
                 <div className="flex items-center gap-6 px-8 py-3 transition-all duration-300">
                     <ul className="flex items-center cursor-pointer gap-8">
-                        <li 
-                          className="transition-transform hover:scale-110 flex items-center"
-                          onClick={() => setView('ps5')}
-                        >
-                          <img src="src/assets/ps.png" width="45px" height="45px" alt="PS Logo" />
+                        <li className="flex items-center">
+                          <button
+                            type="button"
+                            aria-label="Return to PS5 view"
+                            className="flex h-[45px] w-[45px] items-center justify-center"
+                            onClick={() => setView('ps5')}
+                          >
+                            <motion.img
+                              src="src/assets/ps.png"
+                              alt=""
+                              className="h-full w-full"
+                              animate={{ scale: [1, 1.2, 1] }}
+                              transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+                            />
+                          </button>
                         </li>
                         
                         {/* Vertical separator */}

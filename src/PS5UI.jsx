@@ -8,6 +8,7 @@ import MarioGame from './MarioGame';
 import Socials from './Socials';
 import ProjectsPage from './ProjectsPage';
 import ResumePage from './ResumePage';
+import { Link } from 'react-router-dom';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -165,6 +166,12 @@ function PS5UI(){
                         >
                           Want A Normal View ?
                         </button>
+                        <Link
+                          to="/"
+                          className="bg-white/10 border border-white/30 px-5 py-2 rounded-full hover:bg-white/30 hover:scale-105 transition-all text-sm font-semibold tracking-wide shadow-lg"
+                        >
+                          View Selection
+                        </Link>
                     </ul>
                 </div>
                 

@@ -8,6 +8,7 @@ import MarioGame from './MarioGame';
 import Socials from './Socials';
 import ProjectsPage from './ProjectsPage';
 import ResumePage from './ResumePage';
+import SkillsPage from './SkillsPage';
 import { Link } from 'react-router-dom';
 
 function PS5UI(){
@@ -36,6 +37,8 @@ function PS5UI(){
         setView('projects');
       } else if (file.title === 'Resume') {
         setView('resume');
+      } else if (file.title === 'Skills') {
+        setView('skills');
       } else if (file.title === 'Play') {
         setView('mario');
       } else {
@@ -225,7 +228,7 @@ function PS5UI(){
 
                           >
 
-                            <MarioGame />
+                            <MarioGame onBack={() => setView('ps5')} />
 
                           </motion.div>
 
@@ -253,6 +256,19 @@ function PS5UI(){
                             className="relative z-10 w-full flex-1"
                           >
                             <ResumePage onBack={() => setView('ps5')} />
+                          </motion.div>
+
+) : view === 'skills' ? (
+
+                          <motion.div
+                            key="skills"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="relative z-10 w-full flex-1"
+                          >
+                            <SkillsPage />
                           </motion.div>
 
 ) :

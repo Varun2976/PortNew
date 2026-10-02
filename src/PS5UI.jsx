@@ -10,6 +10,7 @@ import ProjectsPage from './ProjectsPage';
 import ResumePage from './ResumePage';
 import SkillsPage from './SkillsPage';
 import { Link } from 'react-router-dom';
+import psLogo from './assets/ps.png';
 
 function PS5UI(){
     const [showIntro, setShowIntro] = useState(true);
@@ -109,7 +110,7 @@ function PS5UI(){
 
               <div className="w-28 h-28 rounded-full bg-white flex items-center justify-center shadow-[0_0_45px_rgba(255,255,255,0.95)] z-10">
                 <img
-                  src="src/assets/ps.png"
+                  src={psLogo}
                   alt="PS Logo"
                   className="w-14 h-14 object-contain brightness-0"
                 />
@@ -151,7 +152,7 @@ function PS5UI(){
                             onClick={() => setView('ps5')}
                           >
                             <motion.img
-                              src="src/assets/ps.png"
+                              src={psLogo}
                               alt=""
                               className="h-full w-full"
                               animate={{ scale: [1, 1.2, 1] }}

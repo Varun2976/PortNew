@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PS5UI from "./PS5UI";
 import Normal from "./Normal";
-import Selection from "./Selection";
+import Selection from "./selection";
 
 function App() {
   return (

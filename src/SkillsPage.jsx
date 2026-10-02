@@ -42,7 +42,7 @@ function SkillsPage() {
           <div>
             
             <h1 className="skills-screen__title">Skills</h1>
-            <p className="skills-screen__subtitle">Languages, frameworks, and tools</p>
+            <p className="skills-screen__subtitle">Hover over the boxes to view !!</p>
           </div>
           <button
             type="button"

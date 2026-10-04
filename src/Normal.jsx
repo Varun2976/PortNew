@@ -46,7 +46,7 @@ function Normal() {
 
 <div className="flex-custom-row flex-col rounded-[30px] border-cyan-300 max-w-7xl mx-auto mt-10 lg:mt-20 px-4 lg:flex-row">
   <ProfileCard
-  className="mx-auto w-full max-w-[388px] lg:mx-0 lg:w-auto lg:max-w-none"
+  className="mx-auto w-full max-w-[388px] lg:mx-0 lg:w-[388px] lg:max-w-[388px] lg:flex-none"
   name="Varun Nair"
   title="Software Engineer"
   handle="javicodes"

@@ -44,8 +44,9 @@ function Normal() {
   </h1>
 </header>
 
-<div className="flex-custom-row flex-col lg:flex-row rounded-[30px] border-cyan-300 max-w-7xl mx-auto mt-10 lg:mt-20 px-4">
+<div className="flex-custom-row flex-col rounded-[30px] border-cyan-300 max-w-7xl mx-auto mt-10 lg:mt-20 px-4 lg:flex-row">
   <ProfileCard
+  className="mx-auto w-full max-w-[388px] lg:mx-0 lg:w-auto lg:max-w-none"
   name="Varun Nair"
   title="Software Engineer"
   handle="javicodes"
@@ -67,7 +68,7 @@ function Normal() {
       ABOUT ME
     </h2>
 
-    <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-justify min-h-[150px]" >
+    <p className="min-h-[150px] text-left text-base leading-relaxed text-white sm:text-justify sm:text-lg md:text-xl lg:text-2xl" >
       I am pursuing Information Technology at KJ Somaiya. I am a tech enthusiast
       and a quick learner with a strong interest in learning new programming
       languages and technologies. I am passionate about understanding PC hardware

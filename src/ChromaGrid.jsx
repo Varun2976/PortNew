@@ -122,7 +122,7 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
+      className={`relative flex min-h-[600px] w-full flex-wrap items-start justify-center gap-3 lg:h-full lg:min-h-0 ${className}`}
       style={{
         '--r': `${radius}px`,
         '--x': '50%',
@@ -134,7 +134,7 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
           key={i}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 cursor-pointer"
+          className="group relative flex w-full max-w-[300px] cursor-pointer flex-col overflow-hidden rounded-[20px] border-2 border-transparent transition-colors duration-300"
           style={{
             '--card-border': c.borderColor || 'transparent',
             background: c.gradient,

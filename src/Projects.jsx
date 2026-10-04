@@ -3,15 +3,15 @@ import projects from "./ProjectsData";
 
 function Projects() {
   return (
-    <section className="max-w-6xl mx-auto mt-32 px-6 py-8">
+    <section className="mx-auto mt-16 max-w-6xl px-4 py-8 sm:mt-24 sm:px-6 lg:mt-32">
       <h2
         className="
-          text-7xl
+          text-4xl sm:text-6xl md:text-7xl
           font-black
           uppercase
           mb-12
           inline-block
-          px-6
+          px-4 sm:px-6
           py-2
           bg-red-500
           text-white
@@ -76,8 +76,7 @@ function Projects() {
                   bg-white
                   border-[5px]
                   border-black
-                  p-8
-                  shadow-[14px_14px_0px_0px_#000]
+                  p-4 shadow-[8px_8px_0px_0px_#000] sm:p-8 sm:shadow-[14px_14px_0px_0px_#000]
                 "
               >
                 <div className="absolute top-0 left-0 w-full h-3 bg-black" />
@@ -85,7 +84,7 @@ function Projects() {
                 <h3
                   className="
                     mt-4
-                    text-4xl
+                    text-2xl sm:text-4xl
                     font-black
                     uppercase
                     text-black
@@ -96,7 +95,7 @@ function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="text-black text-lg leading-relaxed font-semibold">
+                <p className="text-base leading-relaxed font-semibold text-black sm:text-lg">
                   {project.summary}
                 </p>
               </div>

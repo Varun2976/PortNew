@@ -42,7 +42,7 @@ function Socials({ open, onClose }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           onClick={onClose}
-          className="fixed inset-0 z-[9997] flex items-center justify-center bg-black/70 backdrop-blur-md p-6"
+          className="fixed inset-0 z-[9997] flex items-center justify-center bg-black/70 p-3 backdrop-blur-md lg:p-6"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.92, y: 24 }}
@@ -50,7 +50,7 @@ function Socials({ open, onClose }) {
             exit={{ opacity: 0, scale: 0.95, y: 12 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-3xl rounded-3xl border border-white/20 bg-white/10 p-8 text-white shadow-[0_0_60px_rgba(255,255,255,0.12)] backdrop-blur-2xl"
+            className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-3xl overflow-y-auto rounded-3xl border border-white/20 bg-white/10 p-5 text-white shadow-[0_0_60px_rgba(255,255,255,0.12)] backdrop-blur-2xl lg:max-h-none lg:overflow-visible lg:p-8"
           >
             {/* Close */}
             <button
@@ -62,7 +62,7 @@ function Socials({ open, onClose }) {
             </button>
 
             <h2 className="font-blackops text-3xl tracking-wide">Socials</h2>
-            <p className="mt-2 mb-8 text-sm text-white/60">Find me around the internet.</p>
+            <p className="mb-5 mt-2 text-sm text-white/60 lg:mb-8">Find me around the internet.</p>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
               {socials.map((s, i) => {

@@ -9,13 +9,13 @@ function MarioGame({ onBack }) {
       <button
         type="button"
         onClick={onBack}
-        className="absolute left-6 top-6 z-20 inline-flex items-center gap-2 rounded-md border border-white/40 bg-black/80 px-4 py-2 text-sm font-semibold text-white shadow-lg backdrop-blur transition hover:bg-black"
+        className="absolute left-3 top-3 z-20 inline-flex items-center gap-2 rounded-md border border-white/40 bg-black/80 px-3 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur transition hover:bg-black lg:left-6 lg:top-6 lg:px-4 lg:text-sm"
       >
         <ArrowLeft size={18} aria-hidden="true" />
         PS5 View
       </button>
 
-      <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 text-white text-sm pt-6 text-xl font-blackops">
+      <div className="absolute left-1/2 top-2 z-10 w-full -translate-x-1/2 px-3 pt-14 text-center font-blackops text-xs text-white lg:w-auto lg:px-0 lg:pt-6 lg:text-xl">
 
         Move: Arrow Keys | Jump: X | Run: Z
 

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 function Selection() {
   return (
-    <div className="flex gap-6 h-screen w-screen">
+    <div className="flex min-h-[100svh] w-full flex-col md:h-screen md:min-h-0 md:w-screen md:flex-row md:gap-6">
       <Link
   to="/ps5"
-  className="group relative w-1/2 overflow-hidden"
+  className="group relative min-h-[50svh] flex-1 overflow-hidden md:min-h-[100svh] md:w-1/2"
 >
   <img
     src={Blue}
@@ -33,8 +33,8 @@ function Selection() {
   <h1
     className="
       absolute
-      top-10 left-10
-      text-white text-5xl font-bold z-10
+      top-5 left-5
+      text-white text-3xl md:top-10 md:left-10 md:text-5xl font-bold z-10
 
       transition-all duration-700
 
@@ -50,7 +50,7 @@ function Selection() {
 
       <Link
   to="/normal"
-  className="group relative w-1/2 overflow-hidden"
+  className="group relative min-h-[50svh] flex-1 overflow-hidden md:min-h-[100svh] md:w-1/2"
 >
   <img
     src={Red}
@@ -77,8 +77,8 @@ function Selection() {
   <h1
     className="
       absolute
-      top-10 right-10
-      text-white text-5xl font-bold z-10
+      top-5 right-5
+      text-white text-3xl md:top-10 md:right-10 md:text-5xl font-bold z-10
 
       transition-all duration-700
 

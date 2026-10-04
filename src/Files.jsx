@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Files({ files, active, setActive, onSelect }) {
   return (
-    <div className="flex gap-6 px-10 items-start h-40 pt-4">
+    <div className="flex h-40 w-full min-w-0 items-start gap-3 overflow-x-auto overflow-y-hidden px-4 pt-4 md:h-52 md:gap-6 md:px-10">
       {files.map((file, index) => {
         const isActive = active === index;
 
@@ -17,13 +17,13 @@ export default function Files({ files, active, setActive, onSelect }) {
               onSelect?.(file, index);
             }}
             className={`
-              rounded-2xl flex items-end justify-start p-3
+              flex shrink-0 items-end justify-start rounded-2xl p-3
               cursor-pointer bg-center relative overflow-hidden
               transition-all duration-300
               
               ${isActive 
-                ? "w-44 h-44 border-[3px] border-white shadow-2xl z-10 scale-105" 
-                : "w-32 h-32"}
+                ? "z-10 h-32 w-32 scale-105 border-[3px] border-white shadow-2xl md:h-44 md:w-44"
+                : "h-24 w-24 md:h-32 md:w-32"}
             `}
             style={{
               originX: 0,

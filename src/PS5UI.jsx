@@ -129,7 +129,7 @@ function PS5UI(){
           </div>
         )}
 
-        <div className={`text-white flex flex-col bg-black relative ${view === 'ps5' ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
+        <div className={`text-white flex flex-col bg-black relative ${view === 'ps5' ? 'h-[100dvh] overflow-hidden md:h-screen' : 'min-h-[100dvh] md:min-h-screen'}`}>
           
           <div
             className={`fixed inset-0 z-[9998] bg-black pointer-events-none transition-opacity duration-[1800ms] ease-in-out ${
@@ -139,16 +139,16 @@ function PS5UI(){
 
             {/* NAVBAR */}
             {view !== 'mario' && view !== 'projects' && (
-              <nav className={`flex justify-between items-center p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
+              <nav className={`flex flex-wrap justify-between items-center gap-x-2 gap-y-1 p-2 sm:p-4 md:flex-nowrap md:p-6 w-full z-50 ${view === 'ps5' ? 'absolute top-0 left-0' : 'sticky top-0'}`}>
                 
                 {/* LEFT CONTAINER */}
-                <div className="flex items-center gap-6 px-8 py-3 transition-all duration-300">
-                    <ul className="flex items-center cursor-pointer gap-8">
+                <div className="flex items-center gap-2 px-1 py-2 transition-all duration-300 md:gap-6 md:px-8 md:py-3">
+                  <ul className="flex flex-wrap items-center cursor-pointer gap-2 md:flex-nowrap md:gap-8">
                         <li className="flex items-center">
                           <button
                             type="button"
                             aria-label="Return to PS5 view"
-                            className="flex h-[45px] w-[45px] items-center justify-center"
+                            className="flex h-10 w-10 items-center justify-center md:h-[45px] md:w-[45px]"
                             onClick={() => setView('ps5')}
                           >
                             <motion.img
@@ -162,17 +162,17 @@ function PS5UI(){
                         </li>
                         
                         {/* Vertical separator */}
-                        <div className="w-[1px] h-8 bg-white/30" />
+                        <div className="hidden h-8 w-px bg-white/30 md:block" />
                         
                         <button 
-                          className="bg-white/10 border border-white/30 px-5 py-2 rounded-full hover:bg-white/30 hover:scale-105 transition-all text-sm font-semibold tracking-wide shadow-lg"
+                          className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-3 py-2 text-[11px] font-semibold shadow-lg transition-all hover:scale-105 hover:bg-white/30 md:px-5 md:text-sm md:tracking-wide"
                           onClick={() => setView('normal')}
                         >
                           Want A Normal View ?
                         </button>
                         <Link
                           to="/"
-                          className="bg-white/10 border border-white/30 px-5 py-2 rounded-full hover:bg-white/30 hover:scale-105 transition-all text-sm font-semibold tracking-wide shadow-lg"
+                          className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-3 py-2 text-[11px] font-semibold shadow-lg transition-all hover:scale-105 hover:bg-white/30 md:px-5 md:text-sm md:tracking-wide"
                         >
                           View Selection
                         </Link>
@@ -180,11 +180,11 @@ function PS5UI(){
                 </div>
                 
                 {/* RIGHT CONTAINER */}
-                <div className="flex items-center px-8 py-4 transition-all duration-300">
-                    <ul className="flex flex-row gap-8 text-white/90 font-medium text-sm tracking-wide">
-                        <li className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl">Settings</li>
+                <div className="flex items-center px-1 py-2 transition-all duration-300 md:px-8 md:py-4">
+                  <ul className="flex flex-row gap-3 text-white/90 font-medium text-sm tracking-wide md:gap-8">
+                    <li className="cursor-pointer text-sm transition-all hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] md:text-2xl">Settings</li>
                         <li
-                          className="hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all cursor-pointer text-2xl"
+                          className="cursor-pointer text-sm transition-all hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] md:text-2xl"
                           onClick={() => setShowSocials(true)}
                         >
                           Socials
@@ -301,7 +301,7 @@ function PS5UI(){
                             <div className="absolute inset-0 bg-black/30" />
 
                             {/* 🎮 Top Cards */}
-                            <div className="relative pt-28 z-10 w-full">
+                            <div className="relative z-10 w-full pt-32 md:pt-28">
                                 <Files
                                     files={filesData}
                                     active={activeFile}
@@ -311,19 +311,19 @@ function PS5UI(){
                             </div>
 
                             {/* 📝 Bottom Left Content */}
-                            <div className="absolute bottom-20 left-10 max-w-xl z-10">
+                            <div className="absolute bottom-20 left-4 right-4 z-10 max-w-xl md:left-10 md:right-auto">
                                 
-                                <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
+                                <h1 className="mb-3 text-3xl font-bold drop-shadow-lg md:mb-4 md:text-5xl">
                                     {current.title}
                                 </h1>
 
-                                <p className="text-xl text-gray-200 mb-8 drop-shadow-md">
+                                <p className="mb-5 text-base text-gray-200 drop-shadow-md md:mb-8 md:text-xl">
                                     {current.desc}
                                 </p>
 
                                 <button
                                     onClick={() => openFile(current)}
-                                    className="px-8 py-3 bg-white text-black rounded-full font-bold hover:scale-105 transition shadow-lg"
+                                    className="rounded-full bg-white px-6 py-3 font-bold text-black shadow-lg transition hover:scale-105 md:px-8"
                                 >
                                     {current.button || "Play"}
                                 </button>
@@ -342,30 +342,30 @@ function PS5UI(){
                                 </div>
 
                                 {/* Hover Panel */}
-                                <div className="overflow-hidden max-h-0 group-hover:max-h-[50vh] transition-all duration-500 ease-in-out w-[98vw] max-w-none mt-3">
-                                    <div className="bg-black/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 text-white text-sm shadow-lg w-full h-[50vh]">
-                                        <h3 className="font-semibold mb-2 text-2xl">GitHub Streak</h3>
+                                <div className="mt-3 max-h-0 w-[calc(100vw-1rem)] max-w-5xl overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-[50vh] md:w-[98vw] md:max-w-none">
+                                  <div className="h-[50vh] w-full rounded-xl border border-white/20 bg-black/10 p-3 text-sm text-white shadow-lg backdrop-blur-lg sm:p-6">
+                                    <h3 className="mb-2 text-lg font-semibold sm:text-2xl">GitHub Streak</h3>
 
                                         <img 
                                             src="https://ghchart.rshah.org/208637/Varun2976"
                                             alt="GitHub Streak"
                                             className="rounded-lg w-full"
                                         />
-                                        <div className="mt-2 flex gap-4 items-stretch">
-                                          <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
-                                            <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+                                        <div className="mt-2 flex items-stretch gap-2 sm:gap-4">
+                                          <div className="flex h-24 flex-1 flex-col justify-center rounded-lg border border-white/30 bg-white/20 p-2 text-center sm:h-32 sm:p-4">
+                                            <p className="flex items-center justify-center gap-1 text-xs text-gray-300 sm:gap-2 sm:text-lg">
                                               CodeChef
                                               <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/codechef.png" alt="codechef"/>
                                             </p>
-                                            <p className="font-semibold text-3xl">2⭐</p>
+                                            <p className="text-xl font-semibold sm:text-3xl">2⭐</p>
                                           </div>
 
-                                          <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
-                                            <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+                                          <div className="flex h-24 flex-1 flex-col justify-center rounded-lg border border-white/30 bg-white/20 p-2 text-center sm:h-32 sm:p-4">
+                                            <p className="flex items-center justify-center gap-1 text-xs text-gray-300 sm:gap-2 sm:text-lg">
                                               Codeforces
                                               <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/48/external-codeforces-programming-competitions-and-contests-programming-community-logo-filled-tal-revivo.png" alt="codeforces"/>
                                             </p>
-                                            <p className="font-semibold text-3xl">900+</p>
+                                            <p className="text-xl font-semibold sm:text-3xl">900+</p>
                                           </div>
                                         </div>
                                     </div>

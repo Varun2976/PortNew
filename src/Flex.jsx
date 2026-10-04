@@ -4,8 +4,8 @@ import { GitHubCalendar } from "react-github-calendar";
 
 function Flex() {
   return (
-    <section className="max-w-6xl mx-auto mt-32 px-6 py-8">
-      <h2 className="text-left text-4xl font-bitcount text-cyan-300 mb-8 pl-5">
+    <section className="mx-auto mt-16 max-w-6xl px-4 py-8 sm:mt-24 sm:px-6 lg:mt-32">
+      <h2 className="mb-8 pl-2 text-left text-3xl font-bitcount text-cyan-300 sm:pl-5 sm:text-4xl">
         Streaks
       </h2>
 
@@ -19,9 +19,9 @@ function Flex() {
         />
       </div>
 
-      <div className="mt-4 flex gap-4 items-stretch">
-        <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
-          <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+      <div className="mt-4 grid grid-cols-1 items-stretch gap-3 sm:grid-cols-2 sm:gap-4">
+        <div className="flex min-h-28 flex-col justify-center rounded-lg border border-white/30 bg-white/20 p-4 text-center sm:h-32 sm:min-h-0">
+          <p className="flex items-center justify-center gap-2 text-base text-gray-300 sm:text-lg">
             CodeChef
             <img
               width="24"
@@ -30,11 +30,11 @@ function Flex() {
               alt="codechef"
             />
           </p>
-          <p className="font-semibold text-3xl">2 ⭐</p>
+          <p className="text-2xl font-semibold sm:text-3xl">2 ⭐</p>
         </div>
 
-        <div className="flex-1 bg-white/20 border border-white/30 rounded-lg p-4 text-center h-32 flex flex-col justify-center">
-          <p className="text-gray-300 text-lg flex items-center justify-center gap-2">
+        <div className="flex min-h-28 flex-col justify-center rounded-lg border border-white/30 bg-white/20 p-4 text-center sm:h-32 sm:min-h-0">
+          <p className="flex items-center justify-center gap-2 text-base text-gray-300 sm:text-lg">
             Codeforces
             <img
               width="24"
@@ -43,7 +43,7 @@ function Flex() {
               alt="codeforces"
             />
           </p>
-          <p className="font-semibold text-3xl">900+</p>
+          <p className="text-2xl font-semibold sm:text-3xl">900+</p>
         </div>
       </div>
     </section>

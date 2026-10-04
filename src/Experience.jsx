@@ -17,8 +17,8 @@ const experience = [
 
 function Experience() {
   return (
-    <section className="max-w-5xl mx-auto mt-32 px-6 py-8">
-      <h2 className="text-left text-4xl font-bitcount text-[#FFD54A] mb-8">
+    <section className="mx-auto mt-16 max-w-5xl px-4 py-8 sm:mt-24 sm:px-6 lg:mt-32">
+      <h2 className="mb-8 text-left text-2xl font-bitcount text-[#FFD54A] sm:text-4xl">
         Experience
         <span className="text-white">
           {" "}
@@ -86,7 +86,7 @@ function Experience() {
           border-2
           border-[#2EFF7A]
           rounded-xl
-          p-8
+          p-5 sm:p-8
           overflow-hidden
         "
       >
@@ -118,7 +118,7 @@ function Experience() {
         <div className="relative z-10">
           <h3
             className="
-              text-3xl
+              text-2xl sm:text-3xl
               font-bitcount
               text-[#7CFFB2]
               mb-2
@@ -139,7 +139,7 @@ function Experience() {
             "
           />
 
-          <p className="text-[#D8FFE6]/90 text-lg">
+          <p className="text-base text-[#D8FFE6]/90 sm:text-lg">
             {exp.role}
           </p>
         </div>

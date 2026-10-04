@@ -27,6 +27,10 @@ function MarioGame({ onBack }) {
 
         className="w-full h-full border-0"
 
+        tabIndex={0}
+
+        onLoad={(event) => event.currentTarget.contentWindow?.focus()}
+
         title="Mario"
 
         scrolling="no"
